@@ -8,16 +8,14 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
 
-  homeTitleStyle = false;
+  users: any;
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getUsers().subscribe(response => {
+      this.users = response.data;
+      console.log(this.users);
+    });
   }
-
-  clickMe() {
-    this.homeTitleStyle = !this.homeTitleStyle;
-    console.log('clicked!');
-  }
-
 }
