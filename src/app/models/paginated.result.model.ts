@@ -1,4 +1,4 @@
-interface IPaginatedResult<T> {
+export interface IPaginatedResult<T> {
     page: number;
     per_page: number;
     total: number;

@@ -30,6 +30,6 @@ describe('NavComponent', () => {
   it('should render appTitle in a h1 tag', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('ng7-coursetro');
+    expect(compiled.querySelector('a').textContent).toContain('ng7-coursetro');
   });
 });
